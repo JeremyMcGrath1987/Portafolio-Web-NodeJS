@@ -1,0 +1,51 @@
+<%- include('templates/header', {title: 'Contacto'}) %>
+<main class="mdl-layout__content">
+    <div class="site-content">
+        <div class="mdl-grid site-max-width">
+            <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+                <div class="mdl-card__title">
+                    <h1 class="mdl-card__title-text">Contacto</h1>
+                </div>
+                <div class="mdl-card__media"><img class="article-image" src="img/contact.jpg" border="0" alt="Contact">
+                </div>
+                <div class="mdl-grid site-copy">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <p>Puede ponerse en contacto conmigo enviandome directamente un mail, llamando por telefono
+                                o utilizando el siguiente formulario de contacto:</p>
+                            <ul style="font-size: 1.2em;">
+                                <li>✉&nbsp;&nbsp;&nbsp;imerej_@hotmail.com</li><br>
+                                <li>☏&nbsp;&nbsp;&nbsp;628 635 273</li>
+                            </ul>
+                            <form action="https://formspree.io/xgenrrad" method="POST" class="form-contact">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name"
+                                        name="name" required>
+                                    <label class="mdl-textfield__label" for="Name">Nombre...</label>
+                                    <span class="mdl-textfield__error">Introduce letras y espacios</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="email" id="Email" name="_replyto" required>
+                                    <label class="mdl-textfield__label" for="Email">Email...</label>
+                                    <span class="mdl-textfield__error">Introduce un email valido</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <textarea class="mdl-textfield__input" type="text" rows="5" id="note"
+                                        name="message" required></textarea>
+                                    <label class="mdl-textfield__label" for="note">Mensaje</label>
+                                </div>
+                                <p>
+                                    <button
+                                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                                        type="submit">
+                                        Enviar
+                                    </button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('templates/footer') %>
